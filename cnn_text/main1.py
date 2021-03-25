@@ -17,9 +17,7 @@ import re
 def tokenizer(text_): # create a tokenizer function
     ngrams=[]
     n=3
-    #print(text)
-    
-    #print((text_))
+    ##################Portion changed from code to carry tri-chargram operations
     #for i in range(len(text_)):
     text=text_
     #print(text)
@@ -27,19 +25,13 @@ def tokenizer(text_): # create a tokenizer function
     text = re.sub(r'[^a-zA-Z0-9\s]', ' ', text)
     text=text.split(' ')
     _ngrams=[]
-    
-    #
     for sentence in text:
-                #print("AAA",sentence)
-                
-
-                if len(sentence)<=3:
-                    #print(sentence)
-                    _ngrams.append(sentence)
-                else:
-                    v=[sentence[i:i+n] for i in range(0, len(sentence)-n+1, 1)]
-                #print(v)
-                    _ngrams=_ngrams+v
+        if len(sentence)<=3:
+            #print(sentence)
+            _ngrams.append(sentence)
+        else:
+            v=[sentence[i:i+n] for i in range(0, len(sentence)-n+1, 1)]
+            _ngrams=_ngrams+v
     #ngrams.append(_ngrams)
     #print(_ngrams)
     return (np.array(_ngrams).T).tolist()
