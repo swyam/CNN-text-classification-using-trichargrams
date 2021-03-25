@@ -1,5 +1,7 @@
 ## Introduction
 This is the implementation of Kim's [Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1408.5882) paper in PyTorch.
+ 
+code is taken from https://github.com/Shawn1993/cnn-text-classification-pytorch
 
 
 ## Requirement
@@ -11,7 +13,7 @@ This is the implementation of Kim's [Convolutional Neural Networks for Sentence 
 ## Result
 tried for SST dataset.
 
-|SST|.  39.7%
+|SST|.  39.7% using tri-chargrams
 
 
 ## Reference
